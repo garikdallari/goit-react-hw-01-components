@@ -1,0 +1,25 @@
+.profile {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid black;
+}
+.description {
+  width: 100%;
+
+  text-align: center;
+}
+.avatar {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+  height: auto;
+}
+.stats {
+  list-style: none;
+  display: flex;
+}
+.item {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,9 +1,21 @@
 import './App.css';
 import FriendList from './components/FriendList/FriendList';
+import Profile from './components/Profile/Profile';
+import user from './user.json';
 import friends from './friends.json';
-console.log(friends);
 
 function App() {
-  return <FriendList friends={friends} />;
+  return (
+    <div>
+      <FriendList friends={friends} />
+      <Profile
+        name={user.name}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+    </div>
+  );
 }
 export default App;
