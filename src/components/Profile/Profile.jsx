@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './Profile.module.css';
 
-function Profile(props) {
-  const { avatar, name, tag, location, stats } = props;
+function Profile({ avatar, name, tag, location, stats }) {
+  const { followers, views, likes } = stats;
   return (
     <div className={s.profile}>
       <div className={s.description}>
@@ -15,19 +16,29 @@ function Profile(props) {
       <ul className={s.stats}>
         <li className={s.item}>
           <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <span className="quantity">{followers}</span>
         </li>
         <li className={s.item}>
           <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <span className="quantity">{views}</span>
         </li>
         <li className={s.item}>
           <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <span className="quantity">{likes}</span>
         </li>
       </ul>
     </div>
   );
 }
+
+Profile.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
+};
 
 export default Profile;
