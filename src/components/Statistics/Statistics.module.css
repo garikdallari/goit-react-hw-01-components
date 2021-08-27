@@ -1,0 +1,15 @@
+.statList {
+  list-style: none;
+  display: flex;
+}
+.title {
+  margin-left: 50px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid gray;
+}

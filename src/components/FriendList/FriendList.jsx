@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { List, Item, Status, Avatar, Name } from './FriendList.styles';
 
@@ -19,7 +18,6 @@ function FriendList({ friends }) {
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
       isOnline: PropTypes.bool,
       avatar: PropTypes.string,
       name: PropTypes.string.isRequired,
